@@ -1,19 +1,6 @@
-# README
+# Welcome to BlackBook
+BlackBook is an ambitious project designed to guide new penetration testers in the full process of planning, conducting, and docummenting a penetration test. 
 
-## About
+There are hundreds of tools at our disposal when it comes to pen test, and knowing which tool to use and when is crucial. By analyzing the terminal input & output, several algorithms work in harmony to recommend the best course of action, while explaining in full what each possible choice could do to progress the test.
 
-This is the official Wails React template.
-
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
-
-## Live Development
-
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
-
-## Building
-
-To build a redistributable, production mode package, use `wails build`.
+I will be using this project to teach myself GoLang. Wails will be my primary framework used, as it will allow me to create a robust, extremely responsive desktop application using modern web frameworks like React, but without the need for HTTP request or servers.
