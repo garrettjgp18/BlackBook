@@ -3,27 +3,28 @@
 import {terminal} from '../models';
 import {report} from '../models';
 
-export function AddCommand(arg1: string): Promise<string>;
+export function AddCommand(arg1:string):Promise<string>;
 
-export function AnalyzeCommand(arg1: string): Promise<string>;
+export function AnalyzeCommand(arg1:string):Promise<string>;
 
-export function CheckOllamaStatus(): Promise<boolean>;
+export function CheckOllamaStatus():Promise<boolean>;
 
-export function ExportReport(arg1: string): Promise<string>;
+export function ExportReport(arg1:string):Promise<string>;
 
-export function GenerateScript(arg1: string): Promise<string>;
+export function GenerateScript(arg1:string):Promise<string>;
 
-export function GetAISuggestion(): Promise<string>;
+export function GetAISuggestion():Promise<string>;
 
-export function GetCommandHistory(): Promise<Array<terminal.CommandEntry>>;
+export function GetCommandHistory():Promise<Array<terminal.CommandEntry>>;
 
-export function GetCurrentReport(): Promise<report.Report>;
+export function GetCurrentReport():Promise<report.Report>;
 
-export function GetTerminalOutput(): Promise<string>;
+export function GetTerminalOutput():Promise<string>;
 
-export function ResizeTerminal(arg1: number, arg2: number): Promise<void>;
+export function ResizeTerminal(arg1:number,arg2:number):Promise<void>;
 
-export function UpdateCommandOutput(arg1: string, arg2: string, arg3: number): Promise<void>;
+export function Shutdown():Promise<void>;
 
-export function WriteToTerminal(arg1: string): Promise<void>;
+export function UpdateCommandOutput(arg1:string,arg2:string,arg3:number):Promise<void>;
 
+export function WriteToTerminal(arg1:string):Promise<void>;
