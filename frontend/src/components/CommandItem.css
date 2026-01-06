@@ -1,0 +1,80 @@
+.command-item {
+  background: #2d2d30;
+  border: 1px solid #3e3e42;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.command-item:hover {
+  background: #37373d;
+  border-color: #007acc;
+}
+
+.command-item.selected {
+  background: #37373d;
+  border-color: #007acc;
+  box-shadow: 0 0 0 1px #007acc;
+}
+
+.command-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.command-time {
+  color: #999999;
+  font-size: 11px;
+}
+
+.command-status {
+  font-size: 14px;
+}
+
+.command-status.success {
+  color: #27c93f;
+}
+
+.command-status.error {
+  color: #f14c4c;
+}
+
+.command-status.pending {
+  color: #f5f543;
+}
+
+.command-text {
+  color: #d4d4d4;
+  font-size: 13px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  margin-bottom: 6px;
+  word-break: break-all;
+}
+
+.command-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.command-duration,
+.command-exit-code {
+  color: #999999;
+  font-size: 11px;
+}
+
+.command-item.success {
+  border-left: 3px solid #27c93f;
+}
+
+.command-item.error {
+  border-left: 3px solid #f14c4c;
+}
+
+.command-item.pending {
+  border-left: 3px solid #f5f543;
+}

@@ -1,0 +1,184 @@
+.report-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #252526;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #2d2d30;
+  border-bottom: 1px solid #3e3e42;
+}
+
+.report-header h4 {
+  margin: 0;
+  color: #cccccc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.report-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.report-actions button {
+  padding: 6px 12px;
+  background: #0e639c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.report-actions button:hover:not(:disabled) {
+  background: #1177bb;
+}
+
+.report-actions button:disabled {
+  background: #3e3e42;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.report-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.empty-state {
+  color: #999999;
+  font-size: 13px;
+  text-align: center;
+  padding: 24px;
+}
+
+.report-summary h3 {
+  margin: 0 0 16px 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.report-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: #1e1e1e;
+  border: 1px solid #3e3e42;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.stat-label {
+  display: block;
+  color: #999999;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.findings-summary {
+  margin-top: 20px;
+}
+
+.findings-summary h5 {
+  margin: 0 0 12px 0;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.finding-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1e1e1e;
+  border: 1px solid #3e3e42;
+  border-left: 3px solid;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.finding-item.critical {
+  border-left-color: #d32f2f;
+}
+
+.finding-item.high {
+  border-left-color: #f57c00;
+}
+
+.finding-item.medium {
+  border-left-color: #fbc02d;
+}
+
+.finding-item.low {
+  border-left-color: #388e3c;
+}
+
+.finding-item.info {
+  border-left-color: #1976d2;
+}
+
+.finding-number {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.finding-title {
+  flex: 1;
+  color: #d4d4d4;
+  font-size: 13px;
+}
+
+.finding-severity {
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.finding-item.critical .finding-severity {
+  background: #d32f2f;
+  color: white;
+}
+
+.finding-item.high .finding-severity {
+  background: #f57c00;
+  color: white;
+}
+
+.finding-item.medium .finding-severity {
+  background: #fbc02d;
+  color: #000;
+}
+
+.finding-item.low .finding-severity {
+  background: #388e3c;
+  color: white;
+}
+
+.finding-item.info .finding-severity {
+  background: #1976d2;
+  color: white;
+}
