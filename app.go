@@ -14,6 +14,17 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
+const (
+	// OllamaSetupMessage is displayed when Ollama is not available
+	OllamaSetupMessage = `AI analysis is unavailable. Please ensure Ollama is running at http://localhost:11434
+
+To install Ollama:
+1. Visit https://ollama.ai
+2. Download and install Ollama
+3. Run: ollama pull llama3
+4. Start Ollama service`
+)
+
 // App struct
 type App struct {
 	ctx            context.Context
@@ -160,7 +171,7 @@ func (a *App) AnalyzeCommand(commandID string) (string, error) {
 	
 	// Check if AI is available
 	if !a.aiClient.IsAvailable() {
-		return "AI analysis is unavailable. Please ensure Ollama is running at http://localhost:11434\n\nTo install Ollama:\n1. Visit https://ollama.ai\n2. Download and install Ollama\n3. Run: ollama pull llama3\n4. Start Ollama service", nil
+		return OllamaSetupMessage, nil
 	}
 	
 	// Find the command

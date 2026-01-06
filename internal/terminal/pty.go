@@ -100,7 +100,7 @@ func (t *Terminal) StartOutputCapture() {
 			line, err := reader.ReadString('\n')
 			if err != nil {
 				if err != io.EOF {
-					fmt.Printf("Error reading from pty: %v\n", err)
+					// Error reading - terminal may be closed
 				}
 				return
 			}

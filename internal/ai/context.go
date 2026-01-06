@@ -2,6 +2,7 @@ package ai
 
 import (
 	"BlackBook/internal/terminal"
+	"fmt"
 	"strings"
 )
 
@@ -55,13 +56,13 @@ func (cb *ContextBuilder) GetSummary() string {
 
 	var sb strings.Builder
 	sb.WriteString("Session Summary:\n")
-	sb.WriteString("Total commands: " + string(rune(len(cb.history))) + "\n")
+	sb.WriteString(fmt.Sprintf("Total commands: %d\n", len(cb.history)))
 	
 	successful := cb.GetSuccessfulCommands()
-	sb.WriteString("Successful: " + string(rune(len(successful))) + "\n")
+	sb.WriteString(fmt.Sprintf("Successful: %d\n", len(successful)))
 	
 	toolCommands := cb.GetSecurityToolCommands()
-	sb.WriteString("Security tools used: " + string(rune(len(toolCommands))) + "\n")
+	sb.WriteString(fmt.Sprintf("Security tools used: %d\n", len(toolCommands)))
 	
 	return sb.String()
 }
@@ -76,7 +77,7 @@ func (cb *ContextBuilder) BuildContext(maxCommands int) string {
 	var sb strings.Builder
 	for _, cmd := range recent {
 		sb.WriteString("Command: " + cmd.Command + "\n")
-		sb.WriteString("Exit Code: " + string(rune(cmd.ExitCode)) + "\n")
+		sb.WriteString(fmt.Sprintf("Exit Code: %d\n", cmd.ExitCode))
 		if cmd.Output != "" {
 			output := cmd.Output
 			if len(output) > 200 {
